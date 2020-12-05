@@ -1,4 +1,9 @@
+# 2020 update
+
+Attempting to bring some sanity to this and see if I can still make it work. Tread carefully, there is some seriously terrible code here
+
 # MWMass
+
 My MPhys project!!!
 
 Update 3/1/19: uploaded mega_orbit_fit.py - the mcmc fitting script. Input data is sgr_input_data.npy and vc_rh_arrays_log.npy
@@ -15,4 +20,3 @@ Will update with other things as they come, such as metallicities, my calculated
 My code refers extensively to this sheet, as well as to the Spitzer data itself
 
 Also in the python_expts folder is all of the messing around with Python I've done in the last couple of weeks including photutils and astropy things
-
