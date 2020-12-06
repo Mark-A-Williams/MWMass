@@ -17,3 +17,5 @@ print(astropy.astronomical_constants.get())
 import gala as gala
 
 print(gala.coordinates.galactocentric.get_galactocentric2019())
+
+print(5 * np.log10(28400) - 5)
