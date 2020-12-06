@@ -1,5 +1,5 @@
-#usage: mega_orbit_fit.py <number_of_steps>
-#must be run in the same folder as sgr_input_data.npy and vc_rh_arrays_log.npy
+# usage: mega_orbit_fit.py <number_of_steps>
+# must be run in the same folder as sgr_input_data.npy and vc_rh_arrays_log.npy
 
 import time
 import sys
@@ -15,7 +15,6 @@ import scipy
 import gala
 import astropy.constants as ac
 import emcee
-import corner
 import gala.coordinates as gc
 import matplotlib.cm as cm
 import numpy as np
@@ -88,6 +87,10 @@ c = coord.Galactocentric(
 Sgr_vxyz = [[230.], [-35.], [195.]] * u.km/u.s 
 c_gc = c.transform_to(coord.Galactic)
 
+
+# 2020 NOTE
+# https://github.com/adrn/gala/commit/23b0babcd1ad76b01a1cd1712fb1425f786cb641#diff-f041e9f9bedf76d31f62d6ea190a80c11929fece544f7c4d0d4a11d551a5c688
+# vgal_to_vhel deprecated, use an astropy thing
 pm_l, pm_b, vrad = gc.vgal_to_hel(c_gc, Sgr_vxyz, vcirc = 220 * u.km / u.s, vlsr = [9., 12., 7.] * u.km / u.s)
 pm_l = pm_l.to(u.mas/u.yr)
 pm_b = pm_b.to(u.mas/u.yr)

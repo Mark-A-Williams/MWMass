@@ -2,6 +2,14 @@
 
 Attempting to bring some sanity to this and see if I can still make it work. Tread carefully, there is some seriously terrible code here
 
+## Installing
+
+This was a pain in the arse. Eventually I used Anaconda which seemed to be the only decent way to get `gala` to work on Windows. Need to make sure env variables are up to date with the python executable in the anaconda directory, not the Python directory, and also add one for anaconda3\Library\bin (https://github.com/numpy/numpy/issues/14770), otherwise `numpy` poos itself on import. Idk why. Conda install `numpy`, `astropy`, `gala` in order seemed to work then.
+
+If `numpy` is installed already by `pip`, it can screw with trying to install it again with Anaconda, so make sure no trace remains.
+
+---
+
 # MWMass
 
 My MPhys project!!!
